@@ -1,7 +1,7 @@
 import React from 'react';
 import  { useNavigate } from 'react-router-dom';
 import { Box, Button, Flex, Heading, Text, Grid } from '@chakra-ui/react';
-import backgroundImg from '../images/background.png';
+import backgroundImg from './images/background.png';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 
