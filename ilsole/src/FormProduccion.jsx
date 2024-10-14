@@ -68,8 +68,14 @@ const FormProduccion = () => {
                             placeholder="Seleccionar"
                             bg="white"
                         >
-                            <option value="Producto 1">Producto 1</option>
-                            <option value="Producto 2">Producto 2</option>
+                            <option value="Producto 1">Empanada de Jamón y Queso</option>
+                            <option value="Producto 2">Empanada de Carne</option>
+                            <option value="Producto 3">Ravioles PV</option>
+                            <option value="Producto 4">Ravioles Jamón y Queso</option>
+                            <option value="Producto 5">Pizza</option>
+                            <option value="Producto 6">Figacita</option>
+                            <option value="Producto 7">Ñoquis</option>
+                            <option value="Producto 8">Bocaditos</option>
                         </Select>
                         </FormControl>
 
