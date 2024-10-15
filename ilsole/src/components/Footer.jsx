@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <Box>
         <Flex bg="#660033" p={4} justifyContent="start" alignItems="center">
-            <Box as="img" src={logo} alt="Footer Logo" boxSize="55px" ml="45px" h="20%"/>
+            <Box as="img" src={logo} alt="Footer Logo" boxSize="55px" ml="3.5%" h="20%"/>
         </Flex>
     </Box>
   )
