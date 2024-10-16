@@ -9,11 +9,8 @@ import {
     FormControl,
     FormLabel,
     Input,
-    Select,
-    Textarea,
     Heading,
     VStack,
-    HStack,
     Container,
   } from "@chakra-ui/react";
 
@@ -60,7 +57,7 @@ const FormEnvasado = () => {
                     <VStack spacing={4}>
 
                         <FormControl id="producto">
-                        <FormLabel>Produco</FormLabel>
+                        <FormLabel>Producto</FormLabel>
                         <Input
                             type="text"
                             name="producto"
@@ -133,7 +130,7 @@ const FormEnvasado = () => {
             </Box>
             </Container>
         </Box>
-        <Footer />
+      <Footer />
     </>
   )
 }
