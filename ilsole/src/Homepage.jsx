@@ -40,6 +40,7 @@ const Homepage = () => {
               <Button onClick={() => handleNavigation('/produccion')} backgroundColor="#DE8F18" h="200px" _hover={{ backgroundColor: "#BF6F15" }}>PRODUCCION</Button>
               <Button onClick={() => handleNavigation('/producto-pesados')} backgroundColor="#DE8F18" h="200px" _hover={{ backgroundColor: "#BF6F15" }}>PRODUCTOS PESADOS</Button>
               <Button onClick={() => handleNavigation('/productos-envasados')} backgroundColor="#DE8F18" h="200px" _hover={{ backgroundColor: "#BF6F15" }}>PRODUCTOS ENVASADOS</Button>
+              <Button onClick={() => handleNavigation('/expendio')} backgroundColor="#DE8F18" h="200px" _hover={{ backgroundColor: "#BF6F15" }}>CONTROL EXPENDIO</Button>
             </Grid>
         </Flex>
       <Footer />
