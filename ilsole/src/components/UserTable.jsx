@@ -41,6 +41,7 @@ const UserTable = ({ users, onDelete }) => {
           <Tr>
             <Th>ID</Th>
             <Th>Nombre</Th>
+            <Th>Apellido</Th>
             <Th>Email</Th>
             <Th>Role</Th>
             <Th>Eliminar</Th>
@@ -51,6 +52,7 @@ const UserTable = ({ users, onDelete }) => {
             <Tr key={user.id}>
               <Td>{user.id}</Td>
               <Td>{user.name}</Td>
+              <Td>{user.lastName}</Td>
               <Td>{user.email}</Td>
               <Td>{user.role}</Td>
               <Td>

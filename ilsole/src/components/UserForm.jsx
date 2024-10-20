@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 
 const UserForm = ({ onSubmit, formError }) => {
-  const [formData, setFormData] = useState({ name: '', email: '', role: '', password: '' });
+  const [formData, setFormData] = useState({ name: '', lastName: '', email: '', role: '', password: '' });
   const [showError, setShowError] = useState(false);
 
   // Efecto para manejar el borrado del error después de 5 segundos
@@ -47,6 +47,15 @@ const UserForm = ({ onSubmit, formError }) => {
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             placeholder="Nombre del usuario"
+          />
+        </FormControl>
+       <FormControl> 
+        <FormLabel>Apellido</FormLabel>
+          <Input
+            type="text"
+            value={formData.lastName}
+            onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+            placeholder="Apellido del usuario"
           />
         </FormControl>
         <FormControl id="email" isRequired>
