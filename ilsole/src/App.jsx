@@ -5,6 +5,7 @@ import FormProduccion from './FormProduccion'
 import SignIn from './SignIn';
 import FormExpendio from  './FormExpendio';
 import AdminPage from './AdminPage';
+import ControlEnvasado from './ControlEnvasado';
 
 
 
@@ -17,6 +18,7 @@ function App() {
       <Route path='/SignIn' element={<SignIn/>} />
       <Route path='/expendio' element={<FormExpendio />} />
       <Route path='/admin' element={<AdminPage />} />
+      <Route path='/productos-envasados' element={<ControlEnvasado />} />
     </Routes>
   )
 }
