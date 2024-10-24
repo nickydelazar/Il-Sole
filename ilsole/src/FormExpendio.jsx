@@ -70,7 +70,7 @@ const FormEnvasado = () => {
                         <FormControl id="lote">
                         <FormLabel>Lote</FormLabel>
                         <Input
-                            type="text"
+                            type="number"
                             name="lote"
                             value={formData.lote}
                             onChange={handleChange}
@@ -92,7 +92,7 @@ const FormEnvasado = () => {
                         <FormControl id="tempTransporte">
                         <FormLabel>Temperatura del Transporte</FormLabel>
                         <Input
-                            type="text"
+                            type="number"
                             name="tempTransporte"
                             value={formData.tempTransporte}
                             onChange={handleChange}

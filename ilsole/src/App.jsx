@@ -6,6 +6,7 @@ import SignIn from './SignIn';
 import FormExpendio from  './FormExpendio';
 import AdminPage from './AdminPage';
 import ControlEnvasado from './ControlEnvasado';
+import Recepcion from './Recepcion';
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Route path='/expendio' element={<FormExpendio />} />
       <Route path='/admin' element={<AdminPage />} />
       <Route path='/productos-envasados' element={<ControlEnvasado />} />
+      <Route path='/recepcion' element={<Recepcion />} />
     </Routes>
   )
 }

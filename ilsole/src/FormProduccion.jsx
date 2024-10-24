@@ -97,7 +97,7 @@ const FormProduccion = () => {
                         <FormControl id="lote">
                         <FormLabel>Lote de MP/PREP</FormLabel>
                         <Input
-                            type="text"
+                            type="number"
                             name="lote"
                             value={formData.lote}
                             onChange={handleChange}
@@ -130,7 +130,7 @@ const FormProduccion = () => {
                         <FormControl id="pesoDescarte">
                         <FormLabel>Peso de Descarte</FormLabel>
                         <Input
-                            type="text"
+                            type="number"
                             name="pesoDescarte"
                             value={formData.pesoDescarte}
                             onChange={handleChange}

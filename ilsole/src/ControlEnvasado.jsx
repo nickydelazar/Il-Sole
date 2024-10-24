@@ -57,7 +57,7 @@ const ControlEnvasado = () => {
                   <FormControl id="loteProd">
                       <FormLabel>Lote de Producción</FormLabel>
                       <Input
-                          type="text"
+                          type="number"
                           name="loteProd"
                           value={formData.loteProd}
                           onChange={handleChange}
@@ -68,7 +68,7 @@ const ControlEnvasado = () => {
                     <FormControl id="loteEnvasado">
                       <FormLabel>Lote de Envasado</FormLabel>
                       <Input
-                          type="text"
+                          type="number"
                           name="loteDescarte"
                           value={formData.loteEnavasdo}
                           onChange={handleChange}
@@ -90,7 +90,7 @@ const ControlEnvasado = () => {
                       <FormControl id="cantEnvases">
                       <FormLabel>Cantidad envases unitarios</FormLabel>
                       <Input
-                          type="text"
+                          type="number"
                           name="cantEnvases"
                           value={formData.cantEnvases}
                           onChange={handleChange}
@@ -101,7 +101,7 @@ const ControlEnvasado = () => {
                       <FormControl id="cantDescarte">
                       <FormLabel>Cantidad de Descarte</FormLabel>
                       <Input
-                          type="text"
+                          type="number"
                           name="cantDescarte"
                           value={formData.cantDescarte}
                           onChange={handleChange}
