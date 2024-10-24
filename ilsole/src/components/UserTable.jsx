@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   Table,
   Thead,
@@ -18,20 +18,21 @@ import {
 import { DeleteIcon } from '@chakra-ui/icons';
 
 const UserTable = ({ users, onDelete }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [userToDelete, setUserToDelete] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);  // Estado para controlar si el popup está abierto
+  const [userToDelete, setUserToDelete] = useState(null);  // Usuario seleccionado para eliminar
+  const cancelRef = useRef();  // Referencia al botón "Cancelar"
 
   const onDeleteConfirm = () => {
     if (userToDelete) {
-      onDelete(userToDelete); // Llamar a la función onDelete pasada como prop
+      onDelete(userToDelete);  // Llamar a la función onDelete pasada como prop
     }
-    setUserToDelete(null);
-    setIsOpen(false);
+    setUserToDelete(null);  // Reiniciar el usuario a eliminar
+    setIsOpen(false);  // Cerrar el popup
   };
 
   const handleDeleteClick = (id) => {
-    setUserToDelete(id);
-    setIsOpen(true);
+    setUserToDelete(id);  // Guardar el usuario a eliminar
+    setIsOpen(true);  // Abrir el popup de confirmación
   };
 
   return (
@@ -60,15 +61,19 @@ const UserTable = ({ users, onDelete }) => {
                   aria-label="Eliminar usuario"
                   icon={<DeleteIcon />}
                   colorScheme="red"
-                  onClick={() => onDelete(user.id)}
+                  onClick={() => handleDeleteClick(user.id)}  // Abrir el popup en lugar de eliminar directamente
                 />
               </Td>
             </Tr>
           ))}
-        </Tbody>
+        </Tbody>
       </Table>
 
-      <AlertDialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
+      <AlertDialog
+        isOpen={isOpen}
+        leastDestructiveRef={cancelRef}
+        onClose={() => setIsOpen(false)}  // Cerrar el popup sin eliminar
+      >
         <AlertDialogOverlay>
           <AlertDialogContent>
             <AlertDialogHeader fontSize="lg" fontWeight="bold">
@@ -80,8 +85,10 @@ const UserTable = ({ users, onDelete }) => {
             </AlertDialogBody>
 
             <AlertDialogFooter>
-              <Button onClick={() => setIsOpen(false)}>Cancelar</Button>
-              <Button colorScheme="red" onClick={onDeleteConfirm} ml={3}>
+              <Button ref={cancelRef} onClick={() => setIsOpen(false)}>  {/* Botón para cancelar */}
+                Cancelar
+              </Button>
+              <Button colorScheme="red" onClick={onDeleteConfirm} ml={3}>  {/* Botón para confirmar */}
                 Eliminar
               </Button>
             </AlertDialogFooter>

@@ -28,9 +28,9 @@ const UserForm = ({ onSubmit, formError }) => {
   }, [formError]); // Ejecutar el efecto cuando formError cambie
 
   const handleSubmit = () => {
-    if (formData.name && formData.email && formData.role && formData.password) {
+    if (formData.name && formData.lastName && formData.email && formData.role && formData.password) {
       onSubmit(formData);
-      setFormData({ name: '', email: '', role: '', password: '' });
+      setFormData({ name: '', lastName:'', email: '', role: '', password: '' });
       setShowError(false); // Asegúrate de ocultar el error si el formulario se envía correctamente
     } else {
       setShowError(true); // Asegúrate de mostrar el error si hay campos faltantes
@@ -49,7 +49,7 @@ const UserForm = ({ onSubmit, formError }) => {
             placeholder="Nombre del usuario"
           />
         </FormControl>
-       <FormControl> 
+       <FormControl id='apellido' isRequired> 
         <FormLabel>Apellido</FormLabel>
           <Input
             type="text"
