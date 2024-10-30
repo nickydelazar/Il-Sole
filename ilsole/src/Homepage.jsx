@@ -36,7 +36,7 @@ const Homepage = () => {
 
         <Flex justifyContent="center" alignContent="center">
             <Grid templateColumns="repeat(2, 1fr)" gap={6} w="90%" height="100%" margin="30px">
-              <Button onClick={() => handleNavigation('/recepcion')} backgroundColor="#DE8F18" h="200px" _hover={{ backgroundColor: "#BF6F15" }}>RECEPCION DE MERCADERIA</Button>
+              <Button onClick={() => handleNavigation('/recepcion')} backgroundColor="#DE8F18" h="200px"  _hover={{ backgroundColor: "#BF6F15" }}>RECEPCION DE MERCADERIA</Button>
               <Button onClick={() => handleNavigation('/produccion')} backgroundColor="#DE8F18" h="200px" _hover={{ backgroundColor: "#BF6F15" }}>PRODUCCION</Button>
               <Button onClick={() => handleNavigation('/producto-pesados')} backgroundColor="#DE8F18" h="200px" _hover={{ backgroundColor: "#BF6F15" }}>PRODUCTOS PESADOS</Button>
               <Button onClick={() => handleNavigation('/productos-envasados')} backgroundColor="#DE8F18" h="200px" _hover={{ backgroundColor: "#BF6F15" }}>PRODUCTOS ENVASADOS</Button>

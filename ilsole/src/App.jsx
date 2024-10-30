@@ -7,6 +7,7 @@ import FormExpendio from  './FormExpendio';
 import AdminPage from './AdminPage';
 import ControlEnvasado from './ControlEnvasado';
 import Recepcion from './Recepcion';
+import FormPesado from './FormPesado';
 
 
 
@@ -21,6 +22,7 @@ function App() {
       <Route path='/admin' element={<AdminPage />} />
       <Route path='/productos-envasados' element={<ControlEnvasado />} />
       <Route path='/recepcion' element={<Recepcion />} />
+      <Route path='/producto-pesados' element={<FormPesado />} />
     </Routes>
   )
 }
