@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const envasadoController = require('../controllers/envasadoController');
+const envasadoController = require('../controllers/envasadoControllers');
 
 // Rutas para envasado
 router.get('/', envasadoController.getAllEnvasados);

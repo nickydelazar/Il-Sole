@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const produccionController = require('../controllers/produccionController');
+const produccionController = require('../controllers/produccionControllers');
 
 // Rutas para producción
 router.get('/', produccionController.getAllProducciones);

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controlPesadoController = require('../controllers/controlPesadoController');
+const controlPesadoController = require('../controllers/controlPesadoControllers');
 
 // Rutas para control de pesado
 router.get('/', controlPesadoController.getAllPesados);

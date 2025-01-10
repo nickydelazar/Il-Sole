@@ -6,7 +6,7 @@ require('dotenv').config();
 // Importar rutas
 const productRoutes = require('./src/routes/productRoutes');
 const userRoutes = require('./src/routes/userRoutes');
-const productionRoutes = require('./src/routes/productionRoutes');
+const produccionRoutes = require('./src/routes/produccionRoutes');
 const controlPesadoRoutes = require('./src/routes/controlPesadoRoutes');
 const envasadoRoutes = require('./src/routes/envasadoRoutes');
 
@@ -17,7 +17,7 @@ app.use(express.json()); // Para parsear JSON
 // Rutas principales
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/production', productionRoutes);
+app.use('/api/production', produccionRoutes);
 app.use('/api/control-pesado', controlPesadoRoutes);
 app.use('/api/envasado', envasadoRoutes);
 
