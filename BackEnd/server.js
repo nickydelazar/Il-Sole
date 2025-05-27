@@ -1,7 +1,21 @@
-const express = require('express');
+// server.js
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
+const { Pool } = require("pg");
+
 const app = express();
-const cors = require('cors');
-require('dotenv').config();
+const port = process.env.PORT || 5000;
+
+// Conexion a PostgreSQL
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false },
+  });
+  
+  pool.connect()
+    .then(() => console.log("✅ Conectado a la base de datos"))
+    .catch((err) => console.error("❌ Error al conectar la base de datos", err));
 
 // Importar rutas
 const productRoutes = require('./src/routes/productRoutes');
@@ -21,6 +35,3 @@ app.use('/api/production', produccionRoutes);
 app.use('/api/control-pesado', controlPesadoRoutes);
 app.use('/api/envasado', envasadoRoutes);
 
-// Puerto
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
